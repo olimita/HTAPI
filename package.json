@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "10.16.0"
+  },
   "name": "node-postgresql-restapi",
   "version": "1.0.0",
   "main": "index.js",
