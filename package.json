@@ -4,7 +4,7 @@
   },
   "name": "node-postgresql-restapi",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "scr/index.js",
   "scripts": {
     "start": "node src/index.js"
   },
