@@ -1,17 +1,16 @@
-const { Pool } = require('pg');
+const { Client } = require('pg');
 const { databaseuser, databasehost,databasepassword, databasename, databaseport } = require('../configs/config');
 
-const pool = new Pool({
+const pool = new Client({
     user: databaseuser,
     host: databasehost,
     password: databasepassword,
     database: databasename,
-    port: databaseport
+    port: databaseport,
+    ssl: true
 });
 
-var isEmpty = function(obj) {
-    return Object.keys(obj).length === 0;
-  }
+pool.connect();
 
 const getUsers = async (req, res) => {
     const response = await pool.query('SELECT * FROM users ORDER BY id ASC');

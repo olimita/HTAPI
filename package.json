@@ -9,7 +9,7 @@
     "start": "node src/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Juan Camilo Lozano",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
