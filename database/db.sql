@@ -1,5 +1,3 @@
-CREATE DATABASE HTDB;
-
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(40),
@@ -11,8 +9,7 @@ CREATE TABLE creditcards (
   ccard_id SERIAL PRIMARY KEY,
   user_id int NOT NULL,
   saldo INT,
-  fechavencimiento DATE,
-  CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE ON UPDATE CASCADE;
+  CONSTRAINT fk_user_id FOREIGN KEY (user_id) REFERENCES users (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 INSERT INTO users (nombre, cedula, edad)
@@ -26,7 +23,7 @@ INSERT INTO users (nombre, cedula, edad)
     ('jose', 1165651,25);
 
 
-INSERT INTO creditcards (user_id, saldo, fechavencimiento)
+INSERT INTO creditcards (user_id, saldo)
     VALUES (1,321513),
     (2,3214863),
     (2,32151843),
