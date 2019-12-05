@@ -1,12 +1,12 @@
 const { Pool } = require('pg');
-const { databasepassword } = require('../configs/config');
+const { databaseuser, databasehost,databasepassword, databasename, databaseport } = require('../configs/config');
 
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
+    user: databaseuser,
+    host: databasehost,
     password: databasepassword,
-    database: 'HTDB',
-    port: '5432'
+    database: databasename,
+    port: databaseport
 });
 
 var isEmpty = function(obj) {

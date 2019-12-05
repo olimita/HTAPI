@@ -1,8 +1,5 @@
-CREATE DATABASE firstapi;
+CREATE DATABASE HTDB;
 
-\l
-
-\c firstapi;
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     nombre VARCHAR(40),
